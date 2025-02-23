@@ -2,3 +2,9 @@
 *.csv
 *.parquet
 *.duckdb
+*.env
+*__pycache__
+logs*
+target/
+dbt_packages/
+logs/
