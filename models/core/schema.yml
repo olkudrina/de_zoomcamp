@@ -127,3 +127,147 @@ models:
       - name: payment_type_description
         data_type: string
         description: ""
+      
+      - name: year
+        data_type: int64
+        description: "pickup year"
+      
+      - name: quarter
+        data_type: int64
+        description: "pickup quarter"
+      
+      - name: month
+        data_type: int64
+        description: "pickuip month"
+
+      - name: year_quarter
+        data_type: string
+        description: ""
+
+  - name: fact_taxi_trips_quarterly_revenue
+    description: >
+      Quartely YoY revenue comparison 
+    columns:
+      - name: service_type
+        data_type: string
+        description: "green or yelow taxi data"
+
+      - name: year
+        data_type: int64
+        description: ""
+
+      - name: quarter
+        data_type: int64
+        description: ""
+      
+      - name: current_revenue
+        data_type: numeric
+        description: ""
+
+      - name: previous_revenue
+        data_type: numeric
+        description: ""
+
+      - name: yoy_change
+        data_type: numeric
+        description: ""
+    
+  - name: fact_taxi_trips_monthly_fare_percentile
+    description: ""
+    columns:
+      - name: service_type
+        data_type: numeric
+        description: ""
+      - name: year
+        data_type: int64
+        description: ""
+      - name: month
+        data_type: int64
+        description: ""
+      - name: p97
+        data_type: numeric
+        description: ""
+      - name: p95
+        data_type: numeric
+        description: ""
+      - name: p90
+        data_type: numeric
+        description: ""
+
+  - name: dim_fhv_zones
+    description: ""
+    columns:
+      - name: dispatching_base_num
+        data_type: string
+        description: ""
+      - name: sr_flag
+        description: ""
+      - name: affiliated_base_number
+        data_type: string
+        description: ""
+      - name: pickup_datetime
+        data_type: timestamp
+        description: ""
+      - name: pickup_location_id
+        data_type: string
+        description: ""
+      - name: pickup_borough
+        data_type: string
+        description: ""
+      - name: pickup_zone
+        data_type: string
+        description: ""
+      - name: drop_off_datetime
+        data_type: timestamp
+        description: ""
+      - name: dropoff_location_id
+        data_type: string
+        description: ""
+      - name: dropoff_borough
+        data_type: string
+        description: ""
+      - name: dropoff_zone
+        data_type: string
+        description: ""
+      - name: year
+        data_type: int64
+        description: ""
+      - name: month
+        data_type: int64
+        description: ""
+      - name: p97
+  
+  - name: fact_fhv_monthly_zone_traveltime_p90
+    description: ""
+    columns:
+      - name: pickup_location_id
+        description: ""
+        data_type: string
+
+      - name: dropoff_location_id
+        description: ""
+        data_type: string
+
+      - name: pickup_zone
+        description: ""
+        data_type: string
+
+      - name: dropoff_zone
+        description: ""
+        data_type: string
+
+      - name: year
+        description: ""
+        data_type: int64
+
+      - name: month
+        description: ""
+        data_type: int64
+
+      - name: trip_duration
+        description: ""
+        data_type: bigint
+
+      - name: trip_duration_p90
+        description: ""
+        data_type: numeric
